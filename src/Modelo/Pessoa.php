@@ -29,7 +29,7 @@ class Pessoa
     final protected function validaNome(string $nome)
     {
         if (strlen($nome) < 4){
-            echo "Nome do Titular deve ter ao menos 5 caracteres!";
+            throw new NomeInvalidoException($nome);
         }
     }
 }

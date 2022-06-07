@@ -14,8 +14,7 @@ final class CPF
             ]
         ]);
         if ($cpf === false) {
-            echo "Cpf inválido";
-            exit();
+            throw new \InvalidArgumentException("Formato CPF inválido");
         }
         $this->cpf = $cpf;
     }
